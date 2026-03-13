@@ -75,7 +75,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       </div>
                       <p className="text-sm text-slate-600 leading-relaxed mb-3">{section.desc}</p>
                       <p className="text-xs text-slate-500 mb-2">
-                        サイズ：{section.size}／提出期限：{section.deadline}
+                        サイズ：{section.size}
+                        <br />
+                        提出期限：{section.deadline}
                       </p>
                       {section.details?.length ? (
                         <ul className="text-xs text-slate-600 space-y-1">

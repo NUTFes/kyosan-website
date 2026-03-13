@@ -2,6 +2,7 @@
 
 import { CheckCircle2, ShoppingBag } from 'lucide-react';
 import type { SponsorshipMenu } from '@/lib/types';
+import { contact } from '@/data/siteContent';
 
 interface SponsorshipMenuSectionProps {
   menus: SponsorshipMenu[];
@@ -81,7 +82,9 @@ export function SponsorshipMenuSection({ menus, onOpenDetail }: SponsorshipMenuS
             type="button"
             className="px-10 py-5 bg-white text-blue-700 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all whitespace-nowrap shadow-xl relative z-10 w-full lg:w-auto"
           >
-            担当者に相談する
+            <a href={`mailto:${contact.email}`}>
+              担当者に相談する
+            </a> 
           </button>
         </div>
       </div>

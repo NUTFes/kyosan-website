@@ -13,7 +13,7 @@ export const bankRows: BankRow[] = [
   { label: '支店名', val: '希望が丘支店 (042)' },
   { label: '預金種別', val: '普通預金' },
   { label: '口座番号', val: '2002151' },
-  { label: '口座名義', val: '技大祭実行委員会' },
+  { label: '口座名義', val: '技大祭実行委員会（ギダイサイジッコウイインカイ）' },
 ];
 
 export const contact = {
@@ -22,11 +22,11 @@ export const contact = {
   instagramHandle: '@nutfes',
 };
 
-export const pdfUrl = 'https://drive.google.com/file/d/1UTkVXOiqtxtNciPXvmtntEyIrSpxp1-S/view';
+export const pdfUrl = 'https://drive.google.com/file/d/1zzNQbLHtdsfj0M2LG7iUw8tbfdK_aK1g/view?usp=drive_link';
 
 export const disclaimerItems = [
   '天災、感染症、その他不可抗力により技大祭が中止となった場合でも、既に発生した準備費用等に充てるため、協賛金のご返金は致しかねます。予めご了承ください。',
-  '広告内容が公序良俗に反する場合、掲載をお断りすることがございます。',
+  '広告内容が著しく不適切と実行委員会側で判断した場合、内容の修正または差し替えをお願いする場合がございます。',
   '掲載期限を過ぎた場合、内容が一部反映されない可能性がございます。',
 ];
 
@@ -67,7 +67,7 @@ export const adDesignGuidelines = {
   dataFormat: {
     heading: 'データ形式',
     items: [
-      '対応形式： AI（推奨）、PDF、PNG、JPEG',
+      '対応形式： Adobe Illustrator（推奨）、PDF、PNG、JPEG',
       'PDF/AI時の注意： 必ず全ての文字をアウトライン化してください。',
       '画像解像度： 300dpi以上を推奨します。',
     ],

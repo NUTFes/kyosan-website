@@ -4,6 +4,15 @@ import { Award, Info, Mail, Instagram } from 'lucide-react';
 import { contact, disclaimerItems } from '@/data/siteContent';
 
 export function Footer() {
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(contact.email);
+      window.alert('メールアドレスをコピーしました。');
+    } catch {
+      window.alert('コピーに失敗しました。お手数ですが手動でコピーしてください。');
+    }
+  };
+
   return (
     <footer id="contact" className="bg-slate-800 text-white pt-24">
       <div className="container mx-auto max-w-6xl px-6 pb-20">
@@ -21,7 +30,11 @@ export function Footer() {
               現役学生の担当スタッフが誠意を持って対応させていただきます。
             </p>
             <div className="space-y-8">
-              <a href={`mailto:${contact.email}`} className="flex items-center gap-6 group">
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="flex items-center gap-6 group text-left"
+              >
                 <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300 border border-white/5">
                   <Mail size={28} />
                 </div>
@@ -31,7 +44,7 @@ export function Footer() {
                     {contact.email}
                   </p>
                 </div>
-              </a>
+              </button>
               <a
                 href={contact.instagram}
                 target="_blank"

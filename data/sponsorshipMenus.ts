@@ -41,7 +41,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: 'Monitor',
     price: '¥15,000',
     category: 'デジタル',
-    desc: '協賛者様指定URLへのリンク付きバナーを、サイト内全ページで5秒ごとにローテーション表示いただけます。',
+    desc: '協賛者様指定URLへのリンク付きバナーを、サイト内ほぼ全ページで5秒ごとにローテーション表示いただけます。',
     details: [
       '¥15,000／1社',
       '横長バナー（縦横比2:3）・全ページローテーション',
@@ -49,7 +49,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
       'パンフレット1/2・1/8ページのデータ流用可',
     ],
     detailText:
-      `技大祭公式ホームページの全ページに、5秒ごとに切り替わるローテーションバナーとして貴社広告を掲載いただけます。
+      `技大祭公式ホームページのほぼ全ページに、5秒ごとに切り替わるローテーションバナーとして貴社広告を掲載いただけます。
 
 【協賛金額】
 ¥15,000／1社
@@ -59,6 +59,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
 ・広告サイズは端末により異なります
 ・協賛者様指定URLへのリンク付きです
 ・パンフレット1/2・1/8ページのデータを流用いただけます
+・掲載時期はデータの提出があり次第～年度末頃までです
 
 【提出期限】
 2026年8月28日(金)`,
@@ -75,7 +76,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: 'Instagram',
     price: '¥20,000',
     category: 'デジタル',
-    desc: '公式Instagram(@nutfes)で広告を投稿。企画紹介と抱き合わせで1万回以上のインプレッションを保証します。',
+    desc: '技大祭公式Instagram(@nutfes)で貴社広告を投稿。企画紹介と抱き合わせで1万回以上のインプレッションを保証します。',
     details: [
       '¥20,000／先着6社',
       '1万回以上インプレッション保証・2ページ構成',
@@ -112,11 +113,11 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: 'Shirt',
     price: '¥80,000 〜 ¥100,000',
     category: 'アパレル',
-    desc: '約300名の実行委員が着用するTシャツにロゴを掲載いただけます。袖・背中裾・背中ネック下の3タイプからお選びいただけます。',
+    desc: '約300名の実行委員が着用するTシャツにロゴを掲載いただけます。袖・背中裾・背中首下の3タイプからお選びいただけます。',
     details: [
       'タイプA(袖)：¥100,000／先着2社',
       'タイプB(背中裾)：¥80,000／先着2口',
-      'タイプC(背中ネック下)：¥100,000／先着1社',
+      'タイプC(背中首下)：¥100,000／先着1社',
       '提出期限：2026年7月16日(木)',
     ],
     detailText: `【ご案内】
@@ -126,7 +127,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     uniformTypes: [
       { label: 'タイプA（袖）', price: '¥100,000', limit: '先着2社', detail: '袖部分にロゴ及び企業名を掲載いたします。', deadline: '2026年7月16日(木)' },
       { label: 'タイプB（背中裾）', price: '¥80,000', limit: '先着2口', detail: '背中裾部分にロゴもしくは企業名を掲載いたします。', deadline: '2026年7月16日(木)' },
-      { label: 'タイプC（背中ネック下）', price: '¥100,000', limit: '先着1社', detail: '背中ネック下部分にロゴもしくは企業名を掲載いたします。', deadline: '2026年7月16日(木)' },
+      { label: 'タイプC（背中首下）', price: '¥100,000', limit: '先着1社', detail: '背中首下部分にロゴもしくは企業名を掲載いたします。', deadline: '2026年7月16日(木)' },
     ],
     uniformImages: ['/T.png', '/44th_uniform.png', '/uniform_back.png'],
   },
@@ -138,7 +139,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: 'Sun',
     price: '¥60,000 / 1,000枚',
     category: '会場',
-    desc: '協賛者様の広告をうちわ片面に印刷し、当日受付・イベント時等で来場者に配布いただけるメニューです。熱中症対策としても活用されます。',
+    desc: '協賛者様の広告をうちわ片面に印刷し、当日受付・イベント時等で来場者に配布いたします。熱中症対策としても活用されます。',
     details: [
       '¥60,000／1,000枚・先着3口',
       '片面掲載、当日受付・イベント時配布',
@@ -202,7 +203,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: 'Nobori',
     price: '¥10,000/本 〜 （10本セット ¥80,000）',
     category: '会場',
-    desc: '来場者動線などPR効果の高い場所に設置する縦型のぼり（600×1500mm）をご用意しています。1本から10本セットでお得です。',
+    desc: '貴社のロゴとお名前を掲載した縦型のぼりを来場者動線などPR効果の高い場所に設置いたします。',
     details: [
       '¥10,000/本（10本セット¥80,000・2万円お得）',
       '600mm×1500mm、仮デザイン確認後制作',
@@ -210,7 +211,8 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
       '設置場所は委員会選定（昨年度：バス停歩道脇等）',
     ],
     detailText: `【協賛金額】
-1本 ¥10,000／10本セット ¥80,000（2万円お得）
+1本 ¥10,000
+10本セット ¥80,000（2万円お得）
 （例：15本＝8万×1＋1万×5＝13万円）
 
 【広告詳細】
@@ -247,7 +249,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         size: 'A0×2（幅2378mm×高さ841mm）',
         deadline: '2026年7月31日(金)',
         details: [
-          '人物の顔写真など視認性の高い画像はご遠慮いただいております',
+          '人物の顔写真などのステージ演出・雰囲気醸成の妨げとなる可能性のある画像の使用はご遠慮いただいております',
           '先着順に上部に配置いたします',
         ],
         images: ['/backboard.JPG'],
@@ -260,7 +262,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         size: '幅3600mm×高さ900mm',
         deadline: '2026年7月31日(金)',
         details: [
-          '人物の顔写真はご遠慮いただいております（推奨：企業名・ロゴ・キャッチコピー等）',
+          '人物の顔写真などのステージ演出・雰囲気醸成の妨げとなる可能性のある画像の使用はご遠慮いただいております（推奨：企業名・ロゴ・キャッチコピー等）',
         ],
         images: ['/gym_banner.png', '/gym_banner_map.png'],
       },
@@ -272,7 +274,9 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         size: '幅4000mm×高さ1000mm',
         deadline: '2026年7月31日(金)',
         details: [
-          'ロゴ・お名前・キャッチコピー等を掲載いただけます。QRコード掲載はお断りしております',
+          `ロゴ・お名前・キャッチコピー等を掲載いただけます。
+          QRコード掲載はお断りしております
+          ※強風の場合、撤去または設置場所を変更する場合がございます`,
         ],
         images: ['/out_banner.png', '/out_banner_map.png', '/out_banner_place.png'],
       },
