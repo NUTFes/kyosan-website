@@ -1,11 +1,14 @@
-'use client';
+"use client";
 
-import { Calendar, ChevronRight, FileText, ExternalLink } from 'lucide-react';
-import { pdfUrl } from '@/data/siteContent';
+import { Calendar, ChevronRight, FileText, ExternalLink } from "lucide-react";
+import { pdfUrl } from "@/data/siteContent";
 
 export function HeroSection() {
   return (
-    <header id="top"className="pt-40 pb-24 px-6 relative overflow-hidden bg-white">
+    <header
+      id="top"
+      className="pt-40 pb-24 px-6 relative overflow-hidden bg-white"
+    >
       <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 skew-x-12 transform origin-right" />
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid lg:grid-cols-1 gap-12 items-center">

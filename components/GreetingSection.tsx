@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Award, Info } from 'lucide-react';
-import { greeting } from '@/data/siteContent';
+import { Award, Info } from "lucide-react";
+import { greeting } from "@/data/siteContent";
 
 export function GreetingSection() {
   return (
@@ -23,11 +23,17 @@ export function GreetingSection() {
             <p>{greeting.paragraphs[2]}</p>
             <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
               <div>
-                <p className="text-sm text-slate-400 mb-1">{greeting.signature.role}</p>
-                <p className="text-2xl font-bold text-slate-800 tracking-tight">{greeting.signature.name}</p>
+                <p className="text-sm text-slate-400 mb-1">
+                  {greeting.signature.role}
+                </p>
+                <p className="text-2xl font-bold text-slate-800 tracking-tight">
+                  {greeting.signature.name}
+                </p>
               </div>
               <div className="text-right">
-                <p className="text-sm text-slate-400">{greeting.signature.org}</p>
+                <p className="text-sm text-slate-400">
+                  {greeting.signature.org}
+                </p>
               </div>
             </div>
           </div>

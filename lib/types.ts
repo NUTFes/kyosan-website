@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
 /** 協賛メニュー共通（データ用：icon はキー文字列） */
 export interface SponsorshipMenuData {
@@ -16,7 +16,13 @@ export interface SponsorshipMenuData {
   websiteUrl?: string;
   snsImages?: { src: string; label: string }[];
   snsUrl?: string;
-  uniformTypes?: { label: string; price: string; limit: string; detail: string; deadline: string }[];
+  uniformTypes?: {
+    label: string;
+    price: string;
+    limit: string;
+    detail: string;
+    deadline: string;
+  }[];
   uniformNotes?: string[];
   uniformImages?: (string | null)[];
   noboriImages?: string[];
@@ -37,7 +43,7 @@ export interface SponsorshipMenuData {
 }
 
 /** 表示用（icon は ReactNode） */
-export interface SponsorshipMenu extends Omit<SponsorshipMenuData, 'iconKey'> {
+export interface SponsorshipMenu extends Omit<SponsorshipMenuData, "iconKey"> {
   icon: ReactNode;
 }
 

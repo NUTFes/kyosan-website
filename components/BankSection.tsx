@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { CreditCard } from 'lucide-react';
-import { bankRows, transferDeadline } from '@/data/siteContent';
+import { CreditCard } from "lucide-react";
+import { bankRows, transferDeadline } from "@/data/siteContent";
 
 export function BankSection() {
   return (
@@ -13,7 +13,9 @@ export function BankSection() {
               <div className="w-20 h-20 bg-blue-600 text-white rounded-3xl flex items-center justify-center mb-8 shadow-xl">
                 <CreditCard size={40} />
               </div>
-              <h2 className="text-3xl font-bold mb-6 text-slate-800">お振込先案内</h2>
+              <h2 className="text-3xl font-bold mb-6 text-slate-800">
+                お振込先案内
+              </h2>
               <div className="space-y-4">
                 <div className="bg-blue-100 text-blue-800 p-4 rounded-2xl text-sm font-bold">
                   振込期限：{transferDeadline}
@@ -32,8 +34,12 @@ export function BankSection() {
                     key={row.label}
                     className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-5 border-b border-slate-100 last:border-0 px-4"
                   >
-                    <span className="text-sm font-bold text-slate-400 mb-1 sm:mb-0">{row.label}</span>
-                    <span className="text-xl font-black text-slate-800 tracking-tight">{row.val}</span>
+                    <span className="text-sm font-bold text-slate-400 mb-1 sm:mb-0">
+                      {row.label}
+                    </span>
+                    <span className="text-xl font-black text-slate-800 tracking-tight">
+                      {row.val}
+                    </span>
                   </div>
                 ))}
               </div>

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { FileCheck } from 'lucide-react';
-import { adDesignGuidelines } from '@/data/siteContent';
+import { FileCheck } from "lucide-react";
+import { adDesignGuidelines } from "@/data/siteContent";
 
 export function AdDesignSection() {
   const { title, intro, productionTypes, dataFormat } = adDesignGuidelines;
@@ -19,8 +19,12 @@ export function AdDesignSection() {
 
         <div className="space-y-10">
           <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-slate-800 mb-2">{productionTypes.heading}</h3>
-            <p className="text-slate-600 text-sm mb-6">{productionTypes.description}</p>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">
+              {productionTypes.heading}
+            </h3>
+            <p className="text-slate-600 text-sm mb-6">
+              {productionTypes.description}
+            </p>
             <ul className="space-y-4">
               {productionTypes.items.map((item, idx) => (
                 <li key={idx} className="flex gap-4">
@@ -28,7 +32,9 @@ export function AdDesignSection() {
                     {idx + 1}
                   </span>
                   <div>
-                    <span className="font-bold text-slate-800">{item.name}：</span>
+                    <span className="font-bold text-slate-800">
+                      {item.name}：
+                    </span>
                     <span className="text-slate-600">{item.text}</span>
                   </div>
                 </li>
@@ -37,10 +43,15 @@ export function AdDesignSection() {
           </div>
 
           <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-slate-800 mb-6">{dataFormat.heading}</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-6">
+              {dataFormat.heading}
+            </h3>
             <ul className="space-y-3">
               {dataFormat.items.map((line, idx) => (
-                <li key={idx} className="text-slate-600 leading-relaxed flex gap-2">
+                <li
+                  key={idx}
+                  className="text-slate-600 leading-relaxed flex gap-2"
+                >
                   <span className="text-slate-400">・</span>
                   <span>{line}</span>
                 </li>

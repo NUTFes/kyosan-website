@@ -1,15 +1,17 @@
-'use client';
+"use client";
 
-import { Award, Info, Mail, Instagram } from 'lucide-react';
-import { contact, disclaimerItems } from '@/data/siteContent';
+import { Award, Info, Mail, Instagram } from "lucide-react";
+import { contact, disclaimerItems } from "@/data/siteContent";
 
 export function Footer() {
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(contact.email);
-      window.alert('メールアドレスをコピーしました。');
+      window.alert("メールアドレスをコピーしました。");
     } catch {
-      window.alert('コピーに失敗しました。お手数ですが手動でコピーしてください。');
+      window.alert(
+        "コピーに失敗しました。お手数ですが手動でコピーしてください。",
+      );
     }
   };
 
@@ -39,7 +41,9 @@ export function Footer() {
                   <Mail size={28} />
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 uppercase font-bold tracking-widest mb-1">E-mail Address</p>
+                  <p className="text-xs text-slate-500 uppercase font-bold tracking-widest mb-1">
+                    E-mail Address
+                  </p>
                   <p className="text-lg md:text-xl font-bold group-hover:text-blue-400 transition-colors break-all">
                     {contact.email}
                   </p>
@@ -90,9 +94,11 @@ export function Footer() {
             <Award size={16} />
             <span>Gidaisai 45th Executive Committee</span>
           </div>
+          {/* 不要
           <p className="text-xs text-slate-600">
-            &copy; 2026 Nagaoka University of Technology Gidaisai. All rights reserved.
-          </p>
+            &copy; 2026 Gidaisai. All rights
+            reserved.
+          </p> */}
         </div>
       </div>
     </footer>

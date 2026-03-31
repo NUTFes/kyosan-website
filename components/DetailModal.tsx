@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { X, CheckCircle2, Maximize2, ExternalLink } from 'lucide-react';
-import type { SponsorshipMenu } from '@/lib/types';
+import { X, Maximize2, ExternalLink } from "lucide-react";
+import type { SponsorshipMenu } from "@/lib/types";
+import Image from "next/image";
 
 interface DetailModalProps {
   menu: SponsorshipMenu;
@@ -9,19 +10,23 @@ interface DetailModalProps {
   onExpandImage: (src: string) => void;
 }
 
-export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) {
+export function DetailModal({
+  menu,
+  onClose,
+  onExpandImage,
+}: DetailModalProps) {
   const imageFootnote =
-    menu.id === 'uniform'
-      ? '※ 2枚目・3枚目の画像は追加予定です。'
-      : menu.id === 'website' ||
-          menu.id === 'pamphlet' ||
-          menu.id === 'nobori' ||
-          menu.id === 'uchiwa' ||
-          menu.id === 'booth' ||
-          menu.id === 'sns' ||
+    menu.id === "uniform"
+      ? "※ 2枚目・3枚目の画像は追加予定です。"
+      : menu.id === "website" ||
+          menu.id === "pamphlet" ||
+          menu.id === "nobori" ||
+          menu.id === "uchiwa" ||
+          menu.id === "booth" ||
+          menu.id === "sns" ||
           (menu.stageBannerTypes && menu.stageBannerTypes.length > 0)
-        ? '※ 画像をクリックすると拡大表示できます。'
-        : '※ 上記はレイアウトイメージです。実際の画像データは後ほど差し替えてご利用ください。';
+        ? "※ 画像をクリックすると拡大表示できます。"
+        : "※ 上記はレイアウトイメージです。実際の画像データは後ほど差し替えてご利用ください。";
 
   return (
     <div
@@ -52,28 +57,44 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
               料金目安：{menu.price}
             </span>
           </div>
-          <h2 id="modal-title" className="text-2xl md:text-3xl font-black text-slate-900 mb-4">
+          <h2
+            id="modal-title"
+            className="text-2xl md:text-3xl font-black text-slate-900 mb-4"
+          >
             {menu.title}
           </h2>
-          <p className="text-sm md:text-base text-slate-600 mb-6 leading-relaxed">{menu.desc}</p>
+          <p className="text-sm md:text-base text-slate-600 mb-6 leading-relaxed">
+            {menu.desc}
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
             {/* 協賛内容の詳細 */}
             <div className="space-y-5 order-2 md:order-1">
-              <h3 className="text-sm font-bold text-slate-500 tracking-widest uppercase">協賛内容の詳細</h3>
+              <h3 className="text-sm font-bold text-slate-500 tracking-widest uppercase">
+                協賛内容の詳細
+              </h3>
 
               {menu.stageBannerTypes && menu.stageBannerTypes.length > 0 ? (
                 <div className="space-y-5">
                   {menu.stageBannerTypes.map((section, idx) => (
-                    <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div
+                      key={idx}
+                      className="p-4 rounded-2xl bg-slate-50 border border-slate-100"
+                    >
                       <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <span className="font-bold text-slate-800">{section.title}</span>
-                        <span className="text-blue-600 font-black">{section.price}</span>
+                        <span className="font-bold text-slate-800">
+                          {section.title}
+                        </span>
+                        <span className="text-blue-600 font-black">
+                          {section.price}
+                        </span>
                         <span className="text-xs font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded">
                           {section.limit}
                         </span>
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed mb-3">{section.desc}</p>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                        {section.desc}
+                      </p>
                       <p className="text-xs text-slate-500 mb-2">
                         サイズ：{section.size}
                         <br />
@@ -95,17 +116,28 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
               ) : menu.uniformTypes ? (
                 <div className="space-y-5">
                   {menu.uniformTypes.map((t, i) => (
-                    <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                    <div
+                      key={i}
+                      className="p-4 rounded-2xl bg-slate-50 border border-slate-100"
+                    >
                       <div className="flex flex-wrap items-center gap-2 mb-2">
-                        <span className="font-bold text-slate-800">{t.label}</span>
-                        <span className="text-blue-600 font-black">{t.price}</span>
+                        <span className="font-bold text-slate-800">
+                          {t.label}
+                        </span>
+                        <span className="text-blue-600 font-black">
+                          {t.price}
+                        </span>
                         <span className="text-xs font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded">
                           {t.limit}
                         </span>
                       </div>
-                      <p className="text-sm text-slate-600 leading-relaxed mb-3">{t.detail}</p>
+                      <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                        {t.detail}
+                      </p>
                       {t.deadline && (
-                        <p className="text-xs text-slate-500">提出期限：{t.deadline}</p>
+                        <p className="text-xs text-slate-500">
+                          提出期限：{t.deadline}
+                        </p>
                       )}
                     </div>
                   ))}
@@ -124,8 +156,12 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                   </p>
                   {menu.pamphletNote && (
                     <div className="mt-6 p-4 rounded-2xl bg-amber-50 border border-amber-200">
-                      <p className="text-xs font-bold text-amber-800 uppercase tracking-widest mb-2">ご案内</p>
-                      <p className="text-sm text-slate-700 leading-relaxed">{menu.pamphletNote}</p>
+                      <p className="text-xs font-bold text-amber-800 uppercase tracking-widest mb-2">
+                        ご案内
+                      </p>
+                      <p className="text-sm text-slate-700 leading-relaxed">
+                        {menu.pamphletNote}
+                      </p>
                     </div>
                   )}
                   {menu.websiteUrl && (
@@ -167,13 +203,17 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
 
             {/* 掲載イメージ */}
             <div className="space-y-4 order-1 md:order-2">
-              <h3 className="text-sm font-bold text-slate-500 tracking-widest uppercase">掲載イメージ</h3>
+              <h3 className="text-sm font-bold text-slate-500 tracking-widest uppercase">
+                掲載イメージ
+              </h3>
 
               {menu.stageBannerTypes && menu.stageBannerTypes.length > 0 ? (
                 <div className="grid grid-cols-1 gap-5">
                   {menu.stageBannerTypes.map((section, idx) => (
                     <div key={idx} className="space-y-3">
-                      <p className="text-xs font-semibold text-slate-500">{section.title}</p>
+                      <p className="text-xs font-semibold text-slate-500">
+                        {section.title}
+                      </p>
                       <div className="grid grid-cols-2 gap-4">
                         {section.images.map((src, i) => (
                           <div
@@ -181,7 +221,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                             className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                           >
                             <div className="relative min-h-[200px] w-full">
-                              <img
+                              <Image
                                 src={src}
                                 alt={`${section.title} ${i + 1}`}
                                 className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
@@ -202,7 +242,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'pamphlet' && menu.pamphletImages && menu.pamphletImages.length > 0 ? (
+              ) : menu.id === "pamphlet" &&
+                menu.pamphletImages &&
+                menu.pamphletImages.length > 0 ? (
                 <div className="grid grid-cols-2 gap-5">
                   {menu.pamphletImages.map((src, idx) => (
                     <div
@@ -210,7 +252,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
                       <div className="relative min-h-[200px] w-full">
-                        <img
+                        <Image
                           src={src}
                           alt={`パンフレット広告イメージ ${idx + 1}`}
                           className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
@@ -228,14 +270,16 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'website' && menu.websiteImages?.length ? (
+              ) : menu.id === "website" && menu.websiteImages?.length ? (
                 <div className="space-y-5">
                   {menu.websiteImages.map((item, idx) => (
                     <div key={idx} className="space-y-2">
-                      <p className="text-xs font-semibold text-slate-500">{item.label}</p>
+                      <p className="text-xs font-semibold text-slate-500">
+                        {item.label}
+                      </p>
                       <div className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg">
                         <div className="relative w-full min-h-[180px] flex items-center justify-center">
-                          <img
+                          <Image
                             src={item.src}
                             alt={item.label}
                             className="max-h-[320px] w-auto h-auto object-contain object-center cursor-zoom-in"
@@ -254,15 +298,19 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'sns' && menu.snsImages && menu.snsImages.length > 0 ? (
+              ) : menu.id === "sns" &&
+                menu.snsImages &&
+                menu.snsImages.length > 0 ? (
                 <div className="space-y-5">
                   <div className="grid grid-cols-1 gap-5">
                     {menu.snsImages.map((item, idx) => (
                       <div key={idx} className="space-y-2">
-                        <p className="text-xs font-semibold text-slate-500">{item.label}</p>
+                        <p className="text-xs font-semibold text-slate-500">
+                          {item.label}
+                        </p>
                         <div className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg">
                           <div className="relative w-full min-h-[180px] flex items-center justify-center">
-                            <img
+                            <Image
                               src={item.src}
                               alt={item.label}
                               className="max-h-[320px] w-auto h-auto object-contain object-center cursor-zoom-in"
@@ -282,7 +330,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     ))}
                   </div>
                 </div>
-              ) : menu.id === 'nobori' && menu.noboriImages && menu.noboriImages.length > 0 ? (
+              ) : menu.id === "nobori" &&
+                menu.noboriImages &&
+                menu.noboriImages.length > 0 ? (
                 <div className="grid grid-cols-1 gap-5">
                   {menu.noboriImages.map((src, idx) => (
                     <div
@@ -290,7 +340,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
                       <div className="relative min-h-[200px] w-full">
-                        <img
+                        <Image
                           src={src}
                           alt={`のぼり広告イメージ ${idx + 1}`}
                           className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
@@ -308,7 +358,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'uchiwa' && menu.uchiwaImages && menu.uchiwaImages.length > 0 ? (
+              ) : menu.id === "uchiwa" &&
+                menu.uchiwaImages &&
+                menu.uchiwaImages.length > 0 ? (
                 <div className="grid grid-cols-1 gap-5">
                   {menu.uchiwaImages.map((src, idx) => (
                     <div
@@ -316,7 +368,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
                       <div className="relative min-h-[200px] w-full">
-                        <img
+                        <Image
                           src={src}
                           alt={`うちわ広告イメージ ${idx + 1}`}
                           className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
@@ -334,7 +386,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'booth' && menu.boothImages && menu.boothImages.length > 0 ? (
+              ) : menu.id === "booth" &&
+                menu.boothImages &&
+                menu.boothImages.length > 0 ? (
                 <div className="grid grid-cols-1 gap-5">
                   {menu.boothImages.map((src, idx) => (
                     <div
@@ -342,7 +396,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
                       <div className="relative min-h-[200px] w-full">
-                        <img
+                        <Image
                           src={src}
                           alt={`企業ブースイメージ ${idx + 1}`}
                           className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
@@ -360,7 +414,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                     </div>
                   ))}
                 </div>
-              ) : menu.id === 'uniform' && menu.uniformImages ? (
+              ) : menu.id === "uniform" && menu.uniformImages ? (
                 <div className="grid grid-cols-1 gap-5">
                   {menu.uniformImages.map((src, idx) => (
                     <div
@@ -370,7 +424,7 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                       <div className="relative aspect-[4/3] min-h-[220px] w-full">
                         {src ? (
                           <>
-                            <img
+                            <Image
                               src={src}
                               alt={`ユニフォーム広告掲載イメージ ${idx + 1}`}
                               className="w-full h-full object-contain object-center cursor-zoom-in"
@@ -400,7 +454,9 @@ export function DetailModal({ menu, onClose, onExpandImage }: DetailModalProps) 
                 <div className="relative h-56 md:h-64 rounded-3xl bg-gradient-to-br from-indigo-700 via-blue-700 to-slate-900 text-white shadow-xl flex items-center justify-center text-xs md:text-sm">
                   <div className="absolute inset-4 border-2 border-dashed border-sky-200/70 rounded-2xl" />
                   <div className="relative z-10 text-center px-6 space-y-2">
-                    <div className="text-[10px] uppercase tracking-widest text-sky-100">IMAGE PLACEHOLDER</div>
+                    <div className="text-[10px] uppercase tracking-widest text-sky-100">
+                      IMAGE PLACEHOLDER
+                    </div>
                     <div className="text-sm md:text-base font-bold">
                       「{menu.title}」のイメージ画像を
                       <br />

@@ -1,31 +1,32 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useMemo } from 'react';
-import { Nav } from '@/components/Nav';
-import { HeroSection } from '@/components/HeroSection';
-import { GreetingSection } from '@/components/GreetingSection';
-import { SponsorshipMenuSection } from '@/components/SponsorshipMenuSection';
-import { DetailModal } from '@/components/DetailModal';
-import { ImageLightbox } from '@/components/ImageLightbox';
-import { ProcessSection } from '@/components/ProcessSection';
-import { AdDesignSection } from '@/components/AdDesignSection';
-import { BankSection } from '@/components/BankSection';
-import { Footer } from '@/components/Footer';
-import { ScrollToTopButton } from '@/components/ScrollToTopButton';
-import { getSponsorshipMenusWithIcons } from '@/lib/menuIcons';
+import { useState, useEffect, useMemo } from "react";
+import { Nav } from "@/components/Nav";
+import { HeroSection } from "@/components/HeroSection";
+import { GreetingSection } from "@/components/GreetingSection";
+import { SponsorshipMenuSection } from "@/components/SponsorshipMenuSection";
+import { DetailModal } from "@/components/DetailModal";
+import { ImageLightbox } from "@/components/ImageLightbox";
+import { ProcessSection } from "@/components/ProcessSection";
+import { AdDesignSection } from "@/components/AdDesignSection";
+import { Footer } from "@/components/Footer";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { getSponsorshipMenusWithIcons } from "@/lib/menuIcons";
 
 export default function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<ReturnType<typeof getSponsorshipMenusWithIcons>[0] | null>(null);
+  const [activeMenu, setActiveMenu] = useState<
+    ReturnType<typeof getSponsorshipMenusWithIcons>[0] | null
+  >(null);
   const [expandedImageSrc, setExpandedImageSrc] = useState<string | null>(null);
 
   const sponsorshipMenus = useMemo(() => getSponsorshipMenusWithIcons(), []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -49,10 +50,16 @@ export default function Page() {
       )}
 
       {expandedImageSrc && (
-        <ImageLightbox src={expandedImageSrc} onClose={() => setExpandedImageSrc(null)} />
+        <ImageLightbox
+          src={expandedImageSrc}
+          onClose={() => setExpandedImageSrc(null)}
+        />
       )}
 
-      <SponsorshipMenuSection menus={sponsorshipMenus} onOpenDetail={setActiveMenu} />
+      <SponsorshipMenuSection
+        menus={sponsorshipMenus}
+        onOpenDetail={setActiveMenu}
+      />
       <AdDesignSection />
       <ProcessSection />
       {/* <BankSection /> */}

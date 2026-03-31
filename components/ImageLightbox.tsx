@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { X } from 'lucide-react';
+import { X } from "lucide-react";
+import Image from "next/image";
 
 interface ImageLightboxProps {
   src: string;
@@ -24,7 +25,7 @@ export function ImageLightbox({ src, onClose }: ImageLightboxProps) {
       >
         <X size={24} />
       </button>
-      <img
+      <Image
         src={src}
         alt="拡大表示"
         className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
