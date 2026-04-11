@@ -46,10 +46,10 @@ export const contact = {
 };
 
 export const pdfUrl =
-  "https://drive.google.com/file/d/1zzNQbLHtdsfj0M2LG7iUw8tbfdK_aK1g/view?usp=drive_link";
+  "https://drive.google.com/file/d/1siQngGI7dpQDTEmoVemIXY2mu3lJ55Ny/view?usp=sharing";
 
 export const applicationFormUrl =
-  "https://docs.google.com/forms/d/1HxznEJdXMTrdw_QQEYkuDSUOpO7qBTHIsMG9-0FQ0GE/edit";
+  "https://docs.google.com/forms/d/e/1FAIpQLSf7YpvAi2gyyd4QHI7UJKIvafUdjBoTxIdG5DkM2qVGoM3clA/viewform?usp=header";
 
 export const disclaimerItems = [
   "天災、感染症、その他不可抗力により技大祭が中止となった場合でも、既に発生した準備費用等に充てるため、協賛金のご返金は致しかねます。予めご了承ください。",
