@@ -20,8 +20,8 @@ export function SponsorshipMenuSection({
           <h2 className="text-3xl md:text-5xl font-black mb-6">
             協賛メニュー一覧
           </h2>
-          <p className="text-slate-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            全11種類のメニューから、貴社の広報戦略に最適なプランをお選びいただけます。
+          <p className="text-slate-500 mx-auto text-base md:text-lg leading-relaxed">
+            全11種類のメニューから、貴社の地域貢献PRに最適なプランをお選びいただけます。
             <br className="hidden md:block" />
             複数の組み合わせや、掲載内容の調整も柔軟に対応可能です。
           </p>

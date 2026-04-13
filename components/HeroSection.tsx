@@ -25,9 +25,9 @@ export function HeroSection() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-10">
-              長岡技術科学大学 最大の祭典「技大祭」。
+              長岡技術科学大学「技大祭」
               <br className="hidden md:block" />
-              学生の熱意と先端技術を支援し、貴社の魅力を地域社会へ発信する最適なパートナーシップを募集しております。
+              2026年9/19(土)・20(日)開催の「第45回技大祭」を一緒に盛り上げてくださる企業・団体様を募集しております。
             </p>
             <div className="flex flex-wrap gap-4">
               <a

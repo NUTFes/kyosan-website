@@ -19,9 +19,12 @@ export function GreetingSection() {
           </h2>
           <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6 text-base md:text-lg">
             <p className="font-bold">{greeting.paragraphs[0]}</p>
-            <p>{greeting.paragraphs[1]}</p>
-            <p>{greeting.paragraphs[2]}</p>
-            <div className="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+            <p className="mb-1">{greeting.paragraphs[1]}</p>
+            <p className="mb-1">{greeting.paragraphs[2]}</p>
+            <p className="mb-1">{greeting.paragraphs[3]}</p>
+            <p className="mb-1">{greeting.paragraphs[4]}</p>
+            <p>{greeting.paragraphs[5]}</p>
+            <div className="mt-2 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
               <div>
                 <p className="text-sm text-slate-400 mb-1">
                   {greeting.signature.role}
