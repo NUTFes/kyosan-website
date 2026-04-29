@@ -15,6 +15,9 @@ export function DetailModal({
   onClose,
   onExpandImage,
 }: DetailModalProps) {
+  const shouldSkipOptimization = (src: string) =>
+    src.startsWith("/45th_uniform.png");
+
   const imageFootnote =
     menu.id === "uniform"
       ? "※ 2枚目・3枚目の画像は追加予定です。"
@@ -443,6 +446,7 @@ export function DetailModal({
                               alt={`ユニフォーム広告掲載イメージ ${idx + 1}`}
                               fill
                               sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                              unoptimized={shouldSkipOptimization(src)}
                               className="object-contain object-center cursor-zoom-in p-2"
                               onClick={() => onExpandImage(src)}
                             />
