@@ -220,11 +220,13 @@ export function DetailModal({
                             key={i}
                             className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                           >
-                            <div className="relative min-h-[200px] w-full">
+                            <div className="relative aspect-[4/3] min-h-[200px] w-full bg-white">
                               <Image
                                 src={src}
                                 alt={`${section.title} ${i + 1}`}
-                                className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
+                                fill
+                                sizes="(min-width: 1024px) 18vw, (min-width: 768px) 22vw, 44vw"
+                                className="object-contain object-center cursor-zoom-in p-2"
                                 onClick={() => onExpandImage(src)}
                               />
                               <button
@@ -251,11 +253,13 @@ export function DetailModal({
                       key={idx}
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative min-h-[200px] w-full">
+                      <div className="relative aspect-[4/3] min-h-[200px] w-full bg-white">
                         <Image
                           src={src}
                           alt={`パンフレット広告イメージ ${idx + 1}`}
-                          className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
+                          fill
+                          sizes="(min-width: 1024px) 22vw, (min-width: 768px) 28vw, 44vw"
+                          className="object-contain object-center cursor-zoom-in p-2"
                           onClick={() => onExpandImage(src)}
                         />
                         <button
@@ -278,11 +282,13 @@ export function DetailModal({
                         {item.label}
                       </p>
                       <div className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg">
-                        <div className="relative w-full min-h-[180px] flex items-center justify-center">
+                        <div className="relative w-full aspect-[16/9] min-h-[200px] bg-white">
                           <Image
                             src={item.src}
                             alt={item.label}
-                            className="max-h-[320px] w-auto h-auto object-contain object-center cursor-zoom-in"
+                            fill
+                            sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                            className="object-contain object-center cursor-zoom-in p-2"
                             onClick={() => onExpandImage(item.src)}
                           />
                           <button
@@ -309,11 +315,13 @@ export function DetailModal({
                           {item.label}
                         </p>
                         <div className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg">
-                          <div className="relative w-full min-h-[180px] flex items-center justify-center">
+                        <div className="relative w-full aspect-[4/5] min-h-[240px] bg-white">
                             <Image
                               src={item.src}
                               alt={item.label}
-                              className="max-h-[320px] w-auto h-auto object-contain object-center cursor-zoom-in"
+                              fill
+                              sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                              className="object-contain object-center cursor-zoom-in p-2"
                               onClick={() => onExpandImage(item.src)}
                             />
                             <button
@@ -339,11 +347,13 @@ export function DetailModal({
                       key={idx}
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative min-h-[200px] w-full">
+                      <div className="relative aspect-[3/5] min-h-[320px] w-full bg-white">
                         <Image
                           src={src}
                           alt={`のぼり広告イメージ ${idx + 1}`}
-                          className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
+                          fill
+                          sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                          className="object-contain object-center cursor-zoom-in p-3"
                           onClick={() => onExpandImage(src)}
                         />
                         <button
@@ -367,11 +377,13 @@ export function DetailModal({
                       key={idx}
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative min-h-[200px] w-full">
+                      <div className="relative aspect-square min-h-[240px] w-full bg-white">
                         <Image
                           src={src}
                           alt={`うちわ広告イメージ ${idx + 1}`}
-                          className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
+                          fill
+                          sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                          className="object-contain object-center cursor-zoom-in p-3"
                           onClick={() => onExpandImage(src)}
                         />
                         <button
@@ -395,11 +407,13 @@ export function DetailModal({
                       key={idx}
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative min-h-[200px] w-full">
+                      <div className="relative aspect-[16/10] min-h-[220px] w-full bg-white">
                         <Image
                           src={src}
                           alt={`企業ブースイメージ ${idx + 1}`}
-                          className="w-full h-full object-contain object-center cursor-zoom-in bg-white"
+                          fill
+                          sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                          className="object-contain object-center cursor-zoom-in p-2"
                           onClick={() => onExpandImage(src)}
                         />
                         <button
@@ -419,15 +433,17 @@ export function DetailModal({
                   {menu.uniformImages.map((src, idx) => (
                     <div
                       key={idx}
-                      className="relative rounded-2xl bg-slate-900 overflow-hidden border border-slate-200 shadow-lg"
+                      className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative aspect-[4/3] min-h-[220px] w-full">
+                      <div className="relative aspect-[4/3] min-h-[220px] w-full bg-white">
                         {src ? (
                           <>
                             <Image
                               src={src}
                               alt={`ユニフォーム広告掲載イメージ ${idx + 1}`}
-                              className="w-full h-full object-contain object-center cursor-zoom-in"
+                              fill
+                              sizes="(min-width: 1024px) 32vw, (min-width: 768px) 44vw, 88vw"
+                              className="object-contain object-center cursor-zoom-in p-2"
                               onClick={() => onExpandImage(src)}
                             />
                             <button

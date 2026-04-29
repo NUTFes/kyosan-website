@@ -80,7 +80,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         deadline: "2026年7月17日(金)",
       },
     ],
-    uniformImages: ["/T.png", "/44th_uniform.png", "/uniform_back.png"],
+    uniformImages: ["/45th_uniform.png", "/44th_uniform.png", "/uniform_back.png"],
   },
   // ホームページ広告
   {
