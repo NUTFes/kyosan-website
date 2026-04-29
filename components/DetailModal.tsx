@@ -350,7 +350,7 @@ export function DetailModal({
                       key={idx}
                       className="relative rounded-2xl bg-slate-100 overflow-hidden border border-slate-200 shadow-lg"
                     >
-                      <div className="relative aspect-[3/5] min-h-[320px] w-full bg-white">
+                      <div className="relative aspect-square min-h-[320px] w-full bg-white">
                         <Image
                           src={src}
                           alt={`のぼり広告イメージ ${idx + 1}`}

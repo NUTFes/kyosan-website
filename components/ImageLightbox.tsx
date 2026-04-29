@@ -25,12 +25,18 @@ export function ImageLightbox({ src, onClose }: ImageLightboxProps) {
       >
         <X size={24} />
       </button>
-      <Image
-        src={src}
-        alt="拡大表示"
-        className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
+      <div
+        className="relative w-[min(92vw,1100px)] h-[min(82vh,700px)]"
         onClick={(e) => e.stopPropagation()}
-      />
+      >
+        <Image
+          src={src}
+          alt="拡大表示"
+          fill
+          sizes="(min-width: 1280px) 1100px, 92vw"
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 }
