@@ -285,7 +285,12 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
 ・求人目的ではご利用いただけません。インターンシップの告知も不可とさせていただいております
 ・部屋外での配布・呼び込みはご遠慮いただいております。執拗な勧誘禁止。送迎バスは予定しておりません
 ※詳細は下記リンクよりご確認ください`,
-    boothImages: ["/booth.png"],
+    boothImages: [
+      "/booth1.png",
+      "/booth2.JPG",
+      "/booth3.JPG",
+      "/booth4.JPG",
+    ],
     boothUrl:
       "https://www.nagaokaut.ac.jp/student/career/for-business/index.html",
   },
