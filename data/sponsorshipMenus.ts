@@ -166,12 +166,11 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     id: "stage",
     title: "ステージ・横断幕",
     iconKey: "Flag",
-    price: "¥70,000 〜 ¥200,000",
+    price: "¥200,000",
     category: "会場",
-    desc: "ステージバックボード・体育館内壁・外会場の3種類をご用意しています。目玉イベント会場での高い露出が可能です。",
+    desc: "ステージバックボード・外会場の2種類をご用意しています。目玉イベント会場での高い露出が可能です。",
     details: [
       "ステージバックボード：¥200,000／先着4口",
-      "体育館内壁横断幕：¥70,000／先着4口",
       "外会場横断幕：¥200,000／先着2口",
       "提出期限：2026年7月31日(金)",
     ],
@@ -189,18 +188,6 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
           "先着順に上部に配置いたします",
         ],
         images: ["/backboard.JPG"],
-      },
-      {
-        title: "体育館内壁横断幕広告協賛（新規）",
-        desc: "目玉イベントの多くが行われる体育館に横断幕広告を掲載させていただきます。",
-        price: "一口 ¥70,000",
-        limit: "先着4口",
-        size: "幅3600mm×高さ900mm",
-        deadline: "2026年7月31日(金)",
-        details: [
-          "人物の顔写真などのステージ演出・雰囲気醸成の妨げとなる可能性のある画像の使用はご遠慮いただいております（推奨：企業名・ロゴ・キャッチコピー等）",
-        ],
-        images: ["/gym_banner.png", "/gym_banner_map.png"],
       },
       {
         title: "外会場横断幕広告協賛（新規）",
