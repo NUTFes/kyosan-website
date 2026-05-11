@@ -11,7 +11,8 @@ export interface SponsorshipMenuData {
   details: string[];
   detailText: string;
   pamphletImages?: string[];
-  pamphletNote?: string;
+  pamphletCouponText?: string;
+  pamphletCouponImages?: { src: string; label: string }[];
   websiteImages?: { src: string; label: string }[];
   websiteUrl?: string;
   snsImages?: { src: string; label: string }[];

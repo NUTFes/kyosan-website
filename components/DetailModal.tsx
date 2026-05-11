@@ -157,14 +157,46 @@ export function DetailModal({
                   <p className="text-sm md:text-base text-slate-700 leading-relaxed whitespace-pre-line">
                     {menu.detailText}
                   </p>
-                  {menu.pamphletNote && (
-                    <div className="mt-6 p-4 rounded-2xl bg-amber-50 border border-amber-200">
-                      <p className="text-xs font-bold text-amber-800 uppercase tracking-widest mb-2">
-                        ご案内
+                  {menu.pamphletCouponText && (
+                    <div className="mt-6 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                      <p className="text-xs font-semibold text-slate-500 tracking-widest mb-2">
+                        追加オプション
                       </p>
-                      <p className="text-sm text-slate-700 leading-relaxed">
-                        {menu.pamphletNote}
+                      <p className="text-sm text-slate-700 leading-relaxed whitespace-pre-line">
+                        {menu.pamphletCouponText}
                       </p>
+                      {menu.pamphletCouponImages &&
+                        menu.pamphletCouponImages.length > 0 && (
+                          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {menu.pamphletCouponImages.map((item, idx) => (
+                              <div key={idx} className="space-y-2">
+                                <p className="text-xs font-semibold text-slate-500">
+                                  {item.label}
+                                </p>
+                                <div className="relative rounded-xl bg-white overflow-hidden border border-slate-200">
+                                  <div className="relative aspect-[4/3] min-h-[120px] w-full">
+                                    <Image
+                                      src={item.src}
+                                      alt={item.label}
+                                      fill
+                                      sizes="(min-width: 640px) 20vw, 80vw"
+                                      className="object-contain object-center cursor-zoom-in p-2"
+                                      onClick={() => onExpandImage(item.src)}
+                                    />
+                                    <button
+                                      type="button"
+                                      onClick={() => onExpandImage(item.src)}
+                                      className="absolute bottom-2 right-2 p-2 rounded-lg bg-black/50 text-white hover:bg-black/70 transition-colors"
+                                      aria-label="拡大表示"
+                                    >
+                                      <Maximize2 size={16} />
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                     </div>
                   )}
                   {menu.websiteUrl && (
