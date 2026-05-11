@@ -46,7 +46,7 @@ export const contact = {
 };
 
 export const pdfUrl =
-  "https://drive.google.com/file/d/1siQngGI7dpQDTEmoVemIXY2mu3lJ55Ny/view?usp=sharing";
+  "https://drive.google.com/file/d/16NQsoJDD9aipqNqncqU7T05s0t2Cjzpv/view?usp=drive_link";
 
 export const applicationFormUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSf7YpvAi2gyyd4QHI7UJKIvafUdjBoTxIdG5DkM2qVGoM3clA/viewform?usp=header";
