@@ -182,7 +182,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     detailText: "",
     stageBannerTypes: [
       {
-        title: "体育館ステージバックボード広告協賛",
+        title: "ステージバックボード広告協賛",
         desc: "大物ゲストや音楽イベント、中夜祭等の会場である体育館ステージのバックボードに掲載させていただきます。",
         price: "一口 ¥200,000",
         limit: "先着4口",

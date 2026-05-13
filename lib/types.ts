@@ -30,7 +30,7 @@ export interface SponsorshipMenuData {
   uchiwaImages?: string[];
   boothImages?: string[];
   boothUrl?: string;
-  /** ステージ・横断幕の3種（バックボード／体育館内壁／外会場） */
+  /** ステージ・横断幕の3種（バックボード／外会場） */
   stageBannerTypes?: {
     title: string;
     desc: string;
