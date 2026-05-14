@@ -31,20 +31,49 @@ export function SponsorshipMenuSection({
           {menus.map((menu) => (
             <div
               key={menu.id}
-              className="group bg-slate-50 border border-slate-100 p-8 rounded-[2rem] hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col"
+              className={
+                menu.recruitmentClosed
+                  ? "group bg-slate-200/95 border border-slate-300 p-8 rounded-[2rem] transition-all duration-500 flex flex-col shadow-inner shadow-slate-300/40"
+                  : "group bg-slate-50 border border-slate-100 p-8 rounded-[2rem] hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col"
+              }
             >
               <div className="flex justify-between items-start mb-6">
-                <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-slate-50">
+                <div
+                  className={
+                    menu.recruitmentClosed
+                      ? "w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center border border-slate-100 text-slate-500"
+                      : "w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-slate-50"
+                  }
+                >
                   {menu.icon}
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
-                  {menu.category}
-                </span>
+                <div className="flex flex-col items-end gap-2">
+                  {menu.recruitmentClosed ? (
+                    <span className="text-[10px] font-bold tracking-widest text-slate-700 bg-slate-200/90 px-3 py-1 rounded-full border border-slate-300/80">
+                      募集終了
+                    </span>
+                  ) : null}
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
+                    {menu.category}
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+              <h3
+                className={
+                  menu.recruitmentClosed
+                    ? "text-xl font-bold mb-2 text-slate-700"
+                    : "text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors"
+                }
+              >
                 {menu.title}
               </h3>
-              <div className="text-blue-600 font-black text-2xl mb-4">
+              <div
+                className={
+                  menu.recruitmentClosed
+                    ? "text-slate-500 font-black text-2xl mb-4"
+                    : "text-blue-600 font-black text-2xl mb-4"
+                }
+              >
                 {menu.price}
               </div>
               <p className="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
@@ -58,7 +87,11 @@ export function SponsorshipMenuSection({
                   >
                     <CheckCircle2
                       size={16}
-                      className="text-green-500 shrink-0 mt-0.5"
+                      className={
+                        menu.recruitmentClosed && detail.startsWith("※")
+                          ? "text-amber-600 shrink-0 mt-0.5"
+                          : "text-green-500 shrink-0 mt-0.5"
+                      }
                     />
                     {detail}
                   </div>
@@ -67,9 +100,13 @@ export function SponsorshipMenuSection({
               <button
                 type="button"
                 onClick={() => onOpenDetail(menu)}
-                className="w-full py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl text-sm font-bold group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300 shadow-sm"
+                className={
+                  menu.recruitmentClosed
+                    ? "w-full py-4 bg-white border border-slate-300 text-slate-600 rounded-2xl text-sm font-bold transition-all duration-300 shadow-sm hover:bg-slate-50"
+                    : "w-full py-4 bg-white border border-slate-200 text-slate-700 rounded-2xl text-sm font-bold group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300 shadow-sm"
+                }
               >
-                詳細を確認
+                {menu.recruitmentClosed ? "内容を確認（募集終了）" : "詳細を確認"}
               </button>
             </div>
           ))}

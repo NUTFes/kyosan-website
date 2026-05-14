@@ -56,7 +56,18 @@ export function DetailModal({
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
               {menu.category}
             </span>
-            <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+            {menu.recruitmentClosed ? (
+              <span className="text-xs font-bold tracking-widest text-slate-600 bg-slate-200 px-3 py-1 rounded-full border border-slate-300/80">
+                募集終了
+              </span>
+            ) : null}
+            <span
+              className={
+                menu.recruitmentClosed
+                  ? "text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full border border-slate-200"
+                  : "text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full"
+              }
+            >
               料金目安：{menu.price}
             </span>
           </div>
@@ -66,6 +77,23 @@ export function DetailModal({
           >
             {menu.title}
           </h2>
+          {menu.recruitmentClosed ? (
+            <div
+              className="mb-6 rounded-2xl border border-slate-300 bg-slate-50 px-4 py-4 md:px-5 md:py-5"
+              role="status"
+            >
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">
+                募集終了
+              </p>
+              <p className="text-base font-bold text-slate-900">
+                {menu.title}の新規募集は終了しました
+              </p>
+              <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+                {menu.recruitmentClosedMessage ??
+                  "定員に達したため、新規のお申し込みは受け付けておりません。掲載内容の概要は以下をご参照ください。"}
+              </p>
+            </div>
+          ) : null}
           <p className="text-sm md:text-base text-slate-600 mb-6 leading-relaxed">
             {menu.desc}
           </p>
