@@ -186,7 +186,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         desc: "大物ゲストや音楽イベント、中夜祭等の会場である体育館ステージのバックボードに掲載させていただきます。",
         price: "一口 ¥200,000",
         limit: "先着4口",
-        size: "A0×2（幅2378mm×高さ841mm）",
+        size: "幅2.4m×高さ0.9m",
         deadline: "2026年7月31日(金)",
         details: [
           "人物の顔写真などのステージ演出・雰囲気醸成の妨げとなる可能性のある画像の使用はご遠慮いただいております（推奨：企業名・ロゴ・キャッチコピー等）",
@@ -199,7 +199,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         desc: "外会場メインストリートに面した総研棟3階壁面に横断幕を設置いたします。",
         price: "一口 ¥200,000",
         limit: "先着2口",
-        size: "幅4000mm×高さ1000mm",
+        size: "幅4m×高さ1m",
         deadline: "2026年7月31日(金)",
         details: [
           `ロゴ・企業名・キャッチコピー等を掲載させていただきます。
