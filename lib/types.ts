@@ -32,6 +32,10 @@ export interface SponsorshipMenuData {
   uchiwaImages?: string[];
   boothImages?: string[];
   boothUrl?: string;
+  /** true のとき一覧・詳細で募集終了として表示 */
+  recruitmentClosed?: boolean;
+  /** 詳細モーダル内バナーに表示する補足（省略時は共通文） */
+  recruitmentClosedMessage?: string;
   /** ステージ・横断幕の3種（バックボード／外会場） */
   stageBannerTypes?: {
     title: string;
