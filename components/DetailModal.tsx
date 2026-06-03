@@ -2,6 +2,7 @@
 
 import { X, Maximize2, ExternalLink } from "lucide-react";
 import type { SponsorshipMenu } from "@/lib/types";
+import { recruitmentClosedNotice } from "@/data/siteContent";
 import Image from "next/image";
 
 interface DetailModalProps {
@@ -56,10 +57,20 @@ export function DetailModal({
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
               {menu.category}
             </span>
+            {menu.recruitmentClosed && (
+              <span className="text-sm font-semibold text-white bg-slate-500 px-3 py-1 rounded-full">
+                募集終了
+              </span>
+            )}
             <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
               料金目安：{menu.price}
             </span>
           </div>
+          {menu.recruitmentClosed && (
+            <p className="text-sm font-semibold text-slate-700 bg-slate-100 border border-slate-200 rounded-2xl px-4 py-3 mb-6">
+              {recruitmentClosedNotice}
+            </p>
+          )}
           <h2
             id="modal-title"
             className="text-2xl md:text-3xl font-black text-slate-900 mb-4"

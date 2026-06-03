@@ -31,15 +31,26 @@ export function SponsorshipMenuSection({
           {menus.map((menu) => (
             <div
               key={menu.id}
-              className="group bg-slate-50 border border-slate-100 p-8 rounded-[2rem] hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col"
+              className={`group bg-slate-50 border p-8 rounded-[2rem] transition-all duration-500 flex flex-col ${
+                menu.recruitmentClosed
+                  ? "border-slate-200 opacity-90"
+                  : "border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2"
+              }`}
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-slate-50">
                   {menu.icon}
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
-                  {menu.category}
-                </span>
+                <div className="flex flex-col items-end gap-2">
+                  {menu.recruitmentClosed && (
+                    <span className="text-[10px] font-bold tracking-widest text-white bg-slate-500 px-3 py-1 rounded-full">
+                      募集終了
+                    </span>
+                  )}
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
+                    {menu.category}
+                  </span>
+                </div>
               </div>
               <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
                 {menu.title}

@@ -7,6 +7,8 @@ export interface SponsorshipMenuData {
   iconKey: string;
   price: string;
   category: string;
+  /** 定員到達などで新規募集を終了したメニュー */
+  recruitmentClosed?: boolean;
   desc: string;
   details: string[];
   detailText: string;

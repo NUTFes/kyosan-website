@@ -76,6 +76,10 @@ export const greeting = {
 
 export const transferDeadline = "2026年8月28日(金)";
 
+/** 募集終了メニュー向けの共通案内 */
+export const recruitmentClosedNotice =
+  "※定員に達したため、新規のご募集を終了しております。";
+
 /** 広告デザイン・入稿のご案内（共通・1か所表示用） */
 export const adDesignGuidelines = {
   title: "広告デザイン・入稿のご案内",
