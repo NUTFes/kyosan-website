@@ -7,8 +7,6 @@ export interface SponsorshipMenuData {
   iconKey: string;
   price: string;
   category: string;
-  /** 定員到達などで新規募集を終了したメニュー */
-  recruitmentClosed?: boolean;
   desc: string;
   details: string[];
   detailText: string;
@@ -32,7 +30,7 @@ export interface SponsorshipMenuData {
   uchiwaImages?: string[];
   boothImages?: string[];
   boothUrl?: string;
-  /** true のとき一覧・詳細で募集終了として表示 */
+  /** 定員到達などで新規募集を終了したメニュー（一覧・詳細で募集終了表示） */
   recruitmentClosed?: boolean;
   /** 詳細モーダル内バナーに表示する補足（省略時は共通文） */
   recruitmentClosedMessage?: string;
