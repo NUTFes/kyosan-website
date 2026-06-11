@@ -30,8 +30,15 @@ export interface SponsorshipMenuData {
   uchiwaImages?: string[];
   boothImages?: string[];
   boothUrl?: string;
-  /** 定員到達などで新規募集を終了したメニュー（一覧・詳細で募集終了表示） */
+  /**
+   * 募集状態の切替（true: 募集終了 / false または未設定: 募集中）
+   * recruitmentPriceLine と併用すると、枠数変更時も boolean の切替だけで表示を更新できます。
+   */
   recruitmentClosed?: boolean;
+  /** 一覧の先頭行に使う価格表記（例: "¥20,000"） */
+  recruitmentPriceLine?: string;
+  /** 募集中に表示する枠数表記（例: "先着9口"） */
+  recruitmentSlotLabel?: string;
   /** 詳細モーダル内バナーに表示する補足（省略時は共通文） */
   recruitmentClosedMessage?: string;
   /** ステージ・横断幕の3種（バックボード／外会場） */

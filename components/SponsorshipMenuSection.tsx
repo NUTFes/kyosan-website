@@ -3,6 +3,11 @@
 import { CheckCircle2, ShoppingBag } from "lucide-react";
 import type { SponsorshipMenu } from "@/lib/types";
 import { contact } from "@/data/siteContent";
+import {
+  getDisplayDetails,
+  getRecruitmentBadgeLabel,
+  isRecruitmentClosed,
+} from "@/lib/recruitment";
 
 interface SponsorshipMenuSectionProps {
   menus: SponsorshipMenu[];
@@ -28,11 +33,15 @@ export function SponsorshipMenuSection({
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {menus.map((menu) => (
+          {menus.map((menu) => {
+            const recruitmentBadge = getRecruitmentBadgeLabel(menu);
+            const displayDetails = getDisplayDetails(menu);
+
+            return (
             <div
               key={menu.id}
               className={`group bg-slate-50 border p-8 rounded-[2rem] transition-all duration-500 flex flex-col ${
-                menu.recruitmentClosed
+                isRecruitmentClosed(menu)
                   ? "border-slate-200 opacity-90"
                   : "border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2"
               }`}
@@ -42,9 +51,9 @@ export function SponsorshipMenuSection({
                   {menu.icon}
                 </div>
                 <div className="flex flex-col items-end gap-2">
-                  {menu.recruitmentClosed && (
+                  {recruitmentBadge && (
                     <span className="text-[10px] font-bold tracking-widest text-white bg-slate-500 px-3 py-1 rounded-full">
-                      募集終了
+                      {recruitmentBadge}
                     </span>
                   )}
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
@@ -62,7 +71,7 @@ export function SponsorshipMenuSection({
                 {menu.desc}
               </p>
               <div className="space-y-3 mb-8">
-                {menu.details.map((detail, i) => (
+                {displayDetails.map((detail, i) => (
                   <div
                     key={i}
                     className="flex items-start gap-2 text-xs font-semibold text-slate-600 leading-tight"
@@ -83,7 +92,8 @@ export function SponsorshipMenuSection({
                 詳細を確認
               </button>
             </div>
-          ))}
+          );
+          })}
         </div>
 
         <div className="mt-16 p-8 md:p-10 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-[3rem] text-white flex flex-col lg:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden">

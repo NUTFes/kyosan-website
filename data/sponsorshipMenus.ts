@@ -1,6 +1,13 @@
 import type { SponsorshipMenuData } from "@/lib/types";
 
-/** details 統一形式: [価格・枠, 主な仕様, 提出期限 or 補足] */
+/**
+ * details 統一形式: [主な仕様, 提出期限 or 補足]（枠管理メニューは先頭行を自動生成）
+ *
+ * 募集状態の切替:
+ * - recruitmentClosed: true で募集終了 / false または未設定で募集中
+ * - recruitmentPriceLine + recruitmentSlotLabel で一覧の価格・枠行を自動表示
+ * - 枠数変更時は recruitmentSlotLabel と detailText 内の表記を更新
+ */
 export const sponsorshipMenusData: SponsorshipMenuData[] = [
   // パンフレット広告
   {
@@ -222,18 +229,17 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     price: "¥60,000 / 1,000枚",
     category: "会場",
     recruitmentClosed: true,
+    recruitmentPriceLine: "¥60,000／1,000枚",
+    recruitmentSlotLabel: "先着3口",
     desc: "協賛者様の広告をうちわ片面に印刷し、当日受付・イベント時等で来場者へ配布させていただきます。熱中症対策としても活用されます。",
     details: [
-      "¥60,000／1,000枚・募集終了",
       "片面掲載、当日受付・イベント時配布",
       "提出期限：2026年7月31日(金)",
     ],
-    detailText: `※定員に達したため、新規のご募集を終了しております。
-
-技大祭当日受付や各種イベント時等に来場者へ配布するうちわに、貴社広告を片面掲載させていただきます。猛暑時の熱中症対策としても活用されます。
+    detailText: `技大祭当日受付や各種イベント時等に来場者へ配布するうちわに、貴社広告を片面掲載させていただきます。猛暑時の熱中症対策としても活用されます。
 
 【協賛金額】
-一口 1,000枚 ¥60,000（募集終了）
+一口 1,000枚 ¥60,000 先着3口
 
 【広告詳細】
 うちわの片面に広告を掲載させていただきます
@@ -250,18 +256,16 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     price: "¥60,000 / 1ブース",
     category: "会場",
     recruitmentClosed: true,
+    recruitmentPriceLine: "¥60,000／1ブース",
     desc: "来場者に事業内容・製品・サービス等を直接ご説明いただき、地域・学生に業界の展望を知っていただける企画です。",
     details: [
-      "¥60,000／1ブース・募集終了",
       "両日 10:00〜17:00（9:30〜準備）講義棟1階",
       "求人目的ではご利用いただけません（インターンシップの告知も不可）",
     ],
-    detailText: `※定員に達したため、新規のご募集を終了しております。
-
-来場者を対象に事業内容や製品・サービス等をご説明いただき、地域の方々や技大の学生に業界の展望を知っていただける企画「企業ブース」をご用意しています。
+    detailText: `来場者を対象に事業内容や製品・サービス等をご説明いただき、地域の方々や技大の学生に業界の展望を知っていただける企画「企業ブース」をご用意しています。
 
 【協賛金額】
-1ブース ¥60,000（募集終了）
+1ブース ¥60,000
 
 【日時】
 ・2026年9月19日(土)・20日(日) 両日10:00〜17:00（9:30〜準備開始）
@@ -299,20 +303,18 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: "Instagram",
     price: "¥20,000",
     category: "デジタル",
-    recruitmentClosed: true,
+    recruitmentPriceLine: "¥20,000",
+    recruitmentSlotLabel: "先着9口",
     desc: "技大祭公式Instagram(@nutfes)で貴社広告を投稿させていただきます。企画紹介と抱き合わせで、技大祭最終日までに1万回以上のインプレッションを保証いたします。",
     details: [
-      "¥20,000／募集終了",
       "1万回以上インプレッション保証・2ページ構成",
       "提出期限：2026年7月17日(金)",
       "8月下旬順次投稿・永続アーカイブ",
     ],
-    detailText: `※定員に達したため、新規のご募集を終了しております。
-
-約2,300人のフォロワーを持つInstagram技大祭公式アカウント(@nutfes)において、貴社広告を投稿させていただきます。
+    detailText: `約2,300人のフォロワーを持つInstagram技大祭公式アカウント(@nutfes)において、貴社広告を投稿させていただきます。
 
   【協賛金額】
-  一口 ¥20,000（募集終了・技大祭最終日までに1万回以上インプレッション保証）
+  一口 ¥20,000 先着9口（技大祭最終日までに1万回以上インプレッション保証）
 
   【広告詳細】
   ・投稿形態：フィード投稿（1投稿2ページ構成）
