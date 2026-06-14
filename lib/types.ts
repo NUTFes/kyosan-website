@@ -53,6 +53,11 @@ export interface SponsorshipMenuData {
     deadline: string;
     details: string[];
     images: string[];
+    /** 協賛特典（詳細モーダルで強調表示） */
+    perk?: {
+      title: string;
+      description: string;
+    };
   }[];
 }
 

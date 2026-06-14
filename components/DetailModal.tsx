@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Maximize2, ExternalLink } from "lucide-react";
+import { X, Maximize2, ExternalLink, Megaphone, Sparkles } from "lucide-react";
 import type { SponsorshipMenu } from "@/lib/types";
 import {
   getRecruitmentBadgeLabel,
@@ -116,6 +116,35 @@ export function DetailModal({
                       <p className="text-sm text-slate-600 leading-relaxed mb-3">
                         {section.desc}
                       </p>
+                      {section.perk && (
+                        <div className="mb-4 overflow-hidden rounded-2xl border border-amber-200/80 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100/60 shadow-sm">
+                          <div className="flex items-center gap-2 border-b border-amber-200/60 bg-amber-100/50 px-4 py-2">
+                            <Sparkles
+                              size={14}
+                              className="text-amber-600 shrink-0"
+                            />
+                            <span className="text-xs font-bold tracking-widest text-amber-800">
+                              協賛特典
+                            </span>
+                          </div>
+                          <div className="flex items-start gap-3 p-4">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-200/60">
+                              <Megaphone
+                                size={20}
+                                className="text-amber-700"
+                              />
+                            </div>
+                            <div>
+                              <p className="mb-1 text-sm font-black text-slate-900">
+                                {section.perk.title}
+                              </p>
+                              <p className="text-sm leading-relaxed text-slate-700">
+                                {section.perk.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                       <p className="text-xs text-slate-500 mb-2">
                         サイズ：{section.size}
                         <br />
