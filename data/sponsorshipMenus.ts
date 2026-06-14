@@ -220,7 +220,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
           "※強風の場合、撤去または設置場所を変更する場合がございます",
         ],
         images: [
-          "/out_banner.png",
+          "/out_banner.jpg",
           "/out_banner_map.png",
           "/out_banner_place.png",
         ],
