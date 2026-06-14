@@ -74,6 +74,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         label: "タイプA（袖）",
         price: "¥100,000",
         limit: "先着2口",
+        recruitmentClosed: true,
         detail: "袖部分にロゴおよび企業名を掲載いたします。",
         deadline: "2026年7月17日(金)",
       },

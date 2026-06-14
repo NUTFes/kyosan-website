@@ -41,14 +41,34 @@ function getRecruitmentPriceLine(menu: RecruitmentMenu): string | null {
   return menu.recruitmentPriceLine;
 }
 
-/** 一覧カード用の details（先頭行の枠表示を boolean から生成） */
-export function getDisplayDetails(menu: RecruitmentMenu): string[] {
-  const priceLine = getRecruitmentPriceLine(menu);
-  if (!priceLine) return menu.details;
-  return [priceLine, ...menu.details];
-}
-
 /** 詳細モーダル用の募集終了案内 */
 export function getRecruitmentClosedMessage(menu: RecruitmentMenu): string {
   return menu.recruitmentClosedMessage ?? recruitmentClosedNotice;
+}
+
+/** 枠数ラベル（募集終了時は「募集終了」） */
+export function getSlotLimitLabel(item: {
+  limit: string;
+  recruitmentClosed?: boolean;
+}): string {
+  return item.recruitmentClosed ? "募集終了" : item.limit;
+}
+
+type DisplayDetailsMenu = RecruitmentMenu &
+  Pick<SponsorshipMenuData, "id" | "uniformTypes">;
+
+/** 一覧カード用の details（先頭行の枠表示を boolean から生成） */
+export function getDisplayDetails(menu: DisplayDetailsMenu): string[] {
+  if (menu.id === "uniform" && menu.uniformTypes) {
+    const typeLines = menu.uniformTypes.map(
+      (t) =>
+        `${t.label.replace(/（/g, "(").replace(/）/g, ")")}：${t.price}／${getSlotLimitLabel(t)}`,
+    );
+    const deadlineLine = menu.details.find((d) => d.includes("提出期限"));
+    return deadlineLine ? [...typeLines, deadlineLine] : typeLines;
+  }
+
+  const priceLine = getRecruitmentPriceLine(menu);
+  if (!priceLine) return menu.details;
+  return [priceLine, ...menu.details];
 }

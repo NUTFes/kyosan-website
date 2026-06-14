@@ -5,6 +5,7 @@ import type { SponsorshipMenu } from "@/lib/types";
 import {
   getRecruitmentBadgeLabel,
   getRecruitmentClosedMessage,
+  getSlotLimitLabel,
   isRecruitmentClosed,
 } from "@/lib/recruitment";
 import Image from "next/image";
@@ -138,7 +139,11 @@ export function DetailModal({
                   {menu.uniformTypes.map((t, i) => (
                     <div
                       key={i}
-                      className="p-4 rounded-2xl bg-slate-50 border border-slate-100"
+                      className={`p-4 rounded-2xl border ${
+                        t.recruitmentClosed
+                          ? "bg-slate-100 border-slate-200 opacity-90"
+                          : "bg-slate-50 border-slate-100"
+                      }`}
                     >
                       <div className="flex flex-wrap items-center gap-2 mb-2">
                         <span className="font-bold text-slate-800">
@@ -147,8 +152,14 @@ export function DetailModal({
                         <span className="text-blue-600 font-black">
                           {t.price}
                         </span>
-                        <span className="text-xs font-semibold text-slate-500 bg-slate-200 px-2 py-0.5 rounded">
-                          {t.limit}
+                        <span
+                          className={`text-xs font-semibold px-2 py-0.5 rounded ${
+                            t.recruitmentClosed
+                              ? "text-white bg-slate-500"
+                              : "text-slate-500 bg-slate-200"
+                          }`}
+                        >
+                          {getSlotLimitLabel(t)}
                         </span>
                       </div>
                       <p className="text-sm text-slate-600 leading-relaxed mb-3">

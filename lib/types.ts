@@ -23,6 +23,8 @@ export interface SponsorshipMenuData {
     limit: string;
     detail: string;
     deadline: string;
+    /** true のとき当該タイプを募集終了表示 */
+    recruitmentClosed?: boolean;
   }[];
   uniformNotes?: string[];
   uniformImages?: (string | null)[];
