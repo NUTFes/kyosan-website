@@ -200,7 +200,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
           "人物の顔写真などのステージ演出・雰囲気醸成の妨げとなる可能性のある画像の使用はご遠慮いただいております（推奨：企業名・ロゴ・キャッチコピー等）",
           "先着順に上部に配置いたします",
         ],
-        images: ["/backboard.JPG"],
+        images: ["/backboard_1.JPG", "/backboard_2.JPG", "/backboard_3.JPG"],
       },
       {
         title: "外会場横断幕広告協賛（新規）",
