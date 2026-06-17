@@ -311,6 +311,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     category: "デジタル",
     recruitmentPriceLine: "¥20,000",
     recruitmentSlotLabel: "先着9口",
+    recruitmentClosed: true,
     desc: "技大祭公式Instagram(@nutfes)で貴社広告を投稿させていただきます。企画紹介と抱き合わせで、技大祭最終日までに1万回以上のインプレッションを保証いたします。",
     details: [
       "1万回以上インプレッション保証・2ページ構成",
