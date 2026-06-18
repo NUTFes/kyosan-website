@@ -58,6 +58,12 @@ export interface SponsorshipMenuData {
       title: string;
       description: string;
     };
+    /** ステージ出演ゲストの紹介（詳細モーダルで強調表示） */
+    guestHighlight?: {
+      label: string;
+      name: string;
+      description: string;
+    };
   }[];
 }
 

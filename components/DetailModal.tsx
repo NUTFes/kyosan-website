@@ -1,6 +1,6 @@
 "use client";
 
-import { X, Maximize2, ExternalLink, Megaphone, Sparkles } from "lucide-react";
+import { X, Maximize2, ExternalLink, Megaphone, Sparkles, Star } from "lucide-react";
 import type { SponsorshipMenu } from "@/lib/types";
 import {
   getRecruitmentBadgeLabel,
@@ -116,6 +116,27 @@ export function DetailModal({
                       <p className="text-sm text-slate-600 leading-relaxed mb-3">
                         {section.desc}
                       </p>
+                      {section.guestHighlight && (
+                        <div className="mb-4 overflow-hidden rounded-2xl border border-indigo-200/80 bg-gradient-to-br from-indigo-50 via-violet-50 to-indigo-100/50 shadow-sm">
+                          <div className="flex items-center gap-2 border-b border-indigo-200/60 bg-indigo-100/40 px-4 py-2">
+                            <Star
+                              size={14}
+                              className="text-indigo-600 shrink-0 fill-indigo-400"
+                            />
+                            <span className="text-xs font-bold tracking-widest text-indigo-800">
+                              {section.guestHighlight.label}
+                            </span>
+                          </div>
+                          <div className="p-4">
+                            <p className="mb-2 text-2xl font-black tracking-tight text-slate-900">
+                              {section.guestHighlight.name}
+                            </p>
+                            <p className="text-sm leading-relaxed text-slate-700">
+                              {section.guestHighlight.description}
+                            </p>
+                          </div>
+                        </div>
+                      )}
                       {section.perk && (
                         <div className="mb-4 overflow-hidden rounded-2xl border border-amber-200/80 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100/60 shadow-sm">
                           <div className="flex items-center gap-2 border-b border-amber-200/60 bg-amber-100/50 px-4 py-2">
