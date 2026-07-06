@@ -16,9 +16,10 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: "FileText",
     price: "¥5,000 〜 ¥60,000",
     category: "印刷物",
+    recruitmentClosed: true,
+    recruitmentPriceLine: "¥5,000〜¥60,000／1/8〜2ページ",
     desc: "当日配布のA5パンフレットに掲載させていただきます。協賛企業一覧への掲載も含みます。",
     details: [
-      "¥5,000〜¥60,000／1/8〜2ページ",
       "白黒・カラー対応、数千部規模",
       "提出期限：2026年7月3日(金)",
     ],
