@@ -201,4 +201,5 @@ npm run build
 | うちわ広告 | 募集終了 | `recruitmentClosed: true` |
 | 企業ブース協賛 | 募集終了 | `recruitmentClosed: true` |
 | SNS広告 | 募集中 | `recruitmentSlotLabel: "先着9口"` |
+| 外会場横断幕広告協賛（新規） | 募集終了 | `stageBannerTypes` 内 `recruitmentClosed: true` |
 

@@ -189,7 +189,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     desc: "ステージバックボード・外会場の2種類をご用意しています。目玉イベント会場での高い露出が可能です。",
     details: [
       "ステージバックボード：¥200,000／先着4口・ゲストヨネダ2000出演",
-      "外会場横断幕：¥200,000／先着2口・講義棟アナウンス特典付",
+      "外会場横断幕：¥200,000／募集終了・講義棟アナウンス特典付",
       "提出期限：2026年7月31日(金)",
     ],
     detailText: "",
@@ -220,6 +220,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         limit: "先着2口",
         size: "幅4m×高さ1m",
         deadline: "2026年7月31日(金)",
+        recruitmentClosed: true,
         perk: {
           title: "講義棟内30秒アナウンス特典",
           description:
