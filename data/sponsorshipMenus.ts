@@ -59,6 +59,8 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     iconKey: "Shirt",
     price: "¥80,000 〜 ¥100,000",
     category: "アパレル",
+    recruitmentClosed: true,
+    recruitmentPriceLine: "¥80,000 〜 ¥100,000",
     desc: "約300名の実行委員が当日などに着用するTシャツにロゴを掲載させていただきます。袖・背中裾・背中首下の3タイプからお選びいただけます。",
     details: [
       "タイプA(袖)：¥100,000／先着2口",
@@ -83,6 +85,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         label: "タイプB（背中裾）",
         price: "¥80,000",
         limit: "先着2口",
+        recruitmentClosed: true,
         detail: "背中裾部分にロゴおよび企業名を掲載いたします。",
         deadline: "2026年7月17日(金)",
       },
@@ -90,6 +93,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         label: "タイプC（背中首下）",
         price: "¥100,000",
         limit: "先着1口",
+        recruitmentClosed: true,
         detail: "背中首下部分にロゴおよび企業名を掲載いたします。",
         deadline: "2026年7月17日(金)",
       },
@@ -185,7 +189,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
     desc: "ステージバックボード・外会場の2種類をご用意しています。目玉イベント会場での高い露出が可能です。",
     details: [
       "ステージバックボード：¥200,000／先着4口・ゲストヨネダ2000出演",
-      "外会場横断幕：¥200,000／先着2口・講義棟アナウンス特典付",
+      "外会場横断幕：¥200,000／募集終了・講義棟アナウンス特典付",
       "提出期限：2026年7月31日(金)",
     ],
     detailText: "",
@@ -216,6 +220,7 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         limit: "先着2口",
         size: "幅4m×高さ1m",
         deadline: "2026年7月31日(金)",
+        recruitmentClosed: true,
         perk: {
           title: "講義棟内30秒アナウンス特典",
           description:

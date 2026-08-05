@@ -64,6 +64,8 @@ export interface SponsorshipMenuData {
       name: string;
       description: string;
     };
+    /** true のとき当該タイプを募集終了表示 */
+    recruitmentClosed?: boolean;
   }[];
 }
 
