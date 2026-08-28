@@ -221,9 +221,9 @@ export const sponsorshipMenusData: SponsorshipMenuData[] = [
         desc: "外会場メインストリートに面した総研棟3階壁面に横断幕を設置いたします。",
         price: "一口 ¥200,000",
         limit: "先着2口",
-        recruitmentClosed: true,
         size: "幅4m×高さ1m",
         deadline: "2026年7月31日(金)",
+        recruitmentClosed: true,
         perk: {
           title: "講義棟内30秒アナウンス特典",
           description:
