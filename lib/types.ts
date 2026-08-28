@@ -53,6 +53,8 @@ export interface SponsorshipMenuData {
     deadline: string;
     details: string[];
     images: string[];
+    /** true のとき当該タイプを募集終了表示 */
+    recruitmentClosed?: boolean;
     /** 協賛特典（詳細モーダルで強調表示） */
     perk?: {
       title: string;

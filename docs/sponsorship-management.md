@@ -198,7 +198,12 @@ npm run build
 
 | メニュー | 状態 | 管理項目 |
 | --- | --- | --- |
+| パンフレット広告 | 募集終了 | `recruitmentClosed: true` |
+| ユニフォーム広告 | 募集終了 | `recruitmentClosed: true` (全タイプ `recruitmentClosed: true`) |
+| ホームページ広告 | 募集終了 | `recruitmentClosed: true` |
+| のぼり広告 | 募集終了 | `recruitmentClosed: true` |
+| ステージ・横断幕 | 募集終了 | `recruitmentClosed: true` (全タイプ `recruitmentClosed: true`) |
 | うちわ広告 | 募集終了 | `recruitmentClosed: true` |
 | 企業ブース協賛 | 募集終了 | `recruitmentClosed: true` |
-| SNS広告 | 募集中 | `recruitmentSlotLabel: "先着9口"` |
+| SNS広告 | 募集終了 | `recruitmentClosed: true` |
 

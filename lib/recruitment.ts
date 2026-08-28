@@ -11,11 +11,11 @@ type RecruitmentMenu = Pick<
   | "detailText"
 >;
 
-/** 募集枠の有無を boolean で管理するメニューか */
+/** 募集状態を管理するメニューか（recruitmentClosed または recruitmentPriceLine があるか） */
 export function hasRecruitmentStatus(
-  menu: Pick<SponsorshipMenuData, "recruitmentPriceLine">,
+  menu: Pick<SponsorshipMenuData, "recruitmentPriceLine" | "recruitmentClosed">,
 ): boolean {
-  return Boolean(menu.recruitmentPriceLine);
+  return menu.recruitmentClosed !== undefined || Boolean(menu.recruitmentPriceLine);
 }
 
 export function isRecruitmentClosed(
@@ -26,7 +26,7 @@ export function isRecruitmentClosed(
 
 /** 一覧・詳細のバッジ文言（募集終了時のみ表示） */
 export function getRecruitmentBadgeLabel(menu: RecruitmentMenu): string | null {
-  if (!hasRecruitmentStatus(menu) || !isRecruitmentClosed(menu)) return null;
+  if (!isRecruitmentClosed(menu)) return null;
   return "募集終了";
 }
 
